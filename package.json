@@ -1,5 +1,5 @@
 {
-  "name": "Monogoosescraper",
+  "name": "MongooseScrapper",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Malkons/Monogoosescraper.git"
+    "url": "git+https://github.com/Malkons/Mongoosescraper.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Malkons/Monogoosescraper/issues"
+    "url": "https://github.com/Malkons/Mongoosescraper/issues"
   },
-  "homepage": "https://github.com/Malkons/Monogoosescraper#readme"
+  "homepage": "https://github.com/Malkons/Mongoosescraper#readme"
 }
