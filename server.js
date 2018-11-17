@@ -28,7 +28,7 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 if (process.env.MONGODB_URI) {
-  mongoose.connect("mongodb://heroku_hvjrlv8b:45mier7ii4hudksne3rmv4ienr@ds163226.mlab.com:63226/heroku_hvjrlv8b");
+  mongoose.connect(process.env.MONGODB_URI);
 } else {
   mongoose.connect(
     "mongodb://localhost/unit18Populator",
