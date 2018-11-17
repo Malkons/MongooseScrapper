@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Malkons/Mongoosescraper.git"
+    "url": "git+https://github.com/Malkons/MongooseScrapper.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Malkons/Mongoosescraper/issues"
+    "url": "https://github.com/Malkons/MongooseScrapper/issues"
   },
-  "homepage": "https://github.com/Malkons/Mongoosescraper#readme"
+  "homepage": "https://github.com/Malkons/MongooseScrapper#readme"
 }
