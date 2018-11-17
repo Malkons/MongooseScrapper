@@ -27,24 +27,18 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var databaseUri = "mongodb://heroku_hvjrlv8b:45mier7ii4hudksne3rmv4ienr@ds163226.mlab.com:63226/heroku_hvjrlv8b"
-
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect(databaseUri);
-}
+  mongoose.connect(
+    "mongodb://localhost/unit18Populator",
+    { useNewUrlParser: true }
+  );
+};
 
-var DB = mongoose.connection;
-
-// Show any mongoose errors
-DB.on("error", function(error) {
-  console.log("Mongoose Error: ", error);
-});
-
-// Once logged in to the db through mongoose, log a success message
-DB.once("open", function() {
-  console.log("Mongoose connection successful.");
+const dbConnect = mongoose.connection;
+dbConnect.on("error", function (err) {
+  console.log("Mongoose Error: ", err);
 });
 
 // Routes
