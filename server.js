@@ -27,10 +27,25 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect(
-  "mongodb://localhost/unit18Populater",
-  { useNewUrlParser: true }
-);
+var databaseUri = "mongodb://localhost/unit18Populater"
+
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
+
+var DB = mongoose.connection;
+
+// Show any mongoose errors
+DB.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
+});
+
+// Once logged in to the db through mongoose, log a success message
+DB.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
 
 // Routes
 

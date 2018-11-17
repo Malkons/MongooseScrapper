@@ -13,25 +13,9 @@ $.getJSON("/articles", function(data) {
   $("#articleId-" + i).append("<br />");
   $("#articleId-" + i).append("<button id='addNote' class='btn btn-success' data-id='" + data[i]._id + "'>Add/Update Note</button>");
   $("#articleId-" + i).append("<button id='delete-article' class='btn btn-danger' data-id='" + data[i]._id + "'>Delete Article</button>");
-  $("#articleId-" + i).append("<br /><br /><br />");
-     // $("#articleSection").append(
-      //  "<p data-id='" +
-      //    data[i]._id +
-        //  "'>" +
-      //    data[i].title +
-        //  "</p>" +
-     //     "<a href='" +
-          //data[i].link +
-       //   "'>" +
-       //   "Go To Article" +
-        //  "</a>" +
-    //      "<br />" +
-      //    "<button id='delete-article' class='btn btn-danger' data-id='" + data[i]._id + "'>Delete Article</button>" +
-       //   " " +
-       //   "<button id='addNote' class='btn btn-success' data-id='" + data[i]._id + "'>Add/Update Note</button>" 
-     // );
-  
+  $("#articleId-" + i).append("<br /><br /><br />"); 
     }
+    
   });
   // Scrape Button
   $("#scrape").on("click", function() {
